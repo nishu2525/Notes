@@ -5,15 +5,14 @@ import Popup from "./components/Sidebar/Popup";
 import Main from "./components/Main/Main";
 
 const App = () => {
-  
   const [selectedGroupId, setSelectedGroupId] = useState(null);
-  const [groups, setGroups] = useState([]);
-  const [isPopupOpen, setPopupOpen] = useState(false);
 
   const openNoteEditor = (groupId) => {
     setSelectedGroupId(groupId);
   };
 
+  const [groups, setGroups] = useState([]);
+  const [isPopupOpen, setPopupOpen] = useState(false);
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -24,8 +23,7 @@ const App = () => {
   };
 
   const addGroup = (group) => {
-   const updatedGroups =[...groups,{...group,notes:[]}];
-   setGroups(updatedGroups);
+    setGroups([...groups, group]);
   };
   return (
     <div className="app">
@@ -34,7 +32,7 @@ const App = () => {
         openPopup={openPopup}
         openNoteEditor={openNoteEditor}
       />
-      <Main groupId={selectedGroupId} groups={groups} setGroups={setGroups} />
+      <Main groupId={selectedGroupId} groups={groups} />
       {isPopupOpen && <Popup onClose={closePopup} onGroupCreate={addGroup} />}
     </div>
   );

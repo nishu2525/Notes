@@ -31,11 +31,11 @@ background: #000;
 }
 
 
-/* Sidebar.css */
+
 .app-sidebar-notes{
     margin: 1rem;
 }
-/* Add a class for the circle */
+
 .circle {
     width: 3.5rem;
     height: 3.5rem;
@@ -45,21 +45,19 @@ background: #000;
     display: inline-block;
     justify-content: center;
     align-items: center;
-    /* padding-left: 0.7rem;
-    padding-top: 0.7rem; */
     padding: 0.75rem;
     color: #FFF;
 font-family: Roboto;
 font-size: 24.115px;
 font-style: normal;
 font-weight: 500;
-line-height: 97.688%; /* 23.558px */
+line-height: 97.688%; 
 letter-spacing: 0.482px;
-    text-transform: uppercase; /* Makes the circle */
-    font-weight: bold; /* Adds space between the circle and the text */
+    text-transform: uppercase; 
+    font-weight: bold;
   }
   
-  /* Style the list items */
+ 
   .app-sidebar-notes ul {
     list-style: none;
     padding: 0;
@@ -77,10 +75,10 @@ text-transform: capitalize;
 cursor: pointer;
   }
   
-  /* The circle color is set dynamically based on the group's color property */
+ 
   .app-sidebar-notes li .circle {
     background-color: var(--group-color); /* Set the background color dynamically */
   }
   
-  /* Rest of your CSS styles... */
+  
   
