@@ -1,0 +1,86 @@
+.app-sidebar{
+    height: 100vh;
+    width: 22vw;
+    background: #FFF;
+    border-right:  2px solid #CCC;
+    display: inline-block;
+}
+h1{
+    margin: 1rem;
+    color: #000;
+font-family: Roboto;
+font-size: 31.52px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.63px;
+}
+.create_butn{
+    width: 18rem;
+    height:2.5rem;
+    margin: 1rem;
+    color: #FFF;
+font-family: Roboto;
+font-size: 1.8rem;
+font-style: normal;
+font-weight: 500;
+line-height: 97.688%; 
+letter-spacing: 0.54px;
+border-radius: 50px;
+background: #000;
+}
+
+
+/* Sidebar.css */
+.app-sidebar-notes{
+    margin: 1rem;
+}
+/* Add a class for the circle */
+.circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 0.7rem;
+    padding-top: 0.7rem; */
+    padding: 0.75rem;
+    color: #FFF;
+font-family: Roboto;
+font-size: 24.115px;
+font-style: normal;
+font-weight: 500;
+line-height: 97.688%; /* 23.558px */
+letter-spacing: 0.482px;
+    text-transform: uppercase; /* Makes the circle */
+    font-weight: bold; /* Adds space between the circle and the text */
+  }
+  
+  /* Style the list items */
+  .app-sidebar-notes ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .app-sidebar-notes li {
+    margin-bottom: 10px; color: #000;
+font-family: Roboto;
+font-size: 20.67px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.413px;
+text-transform: capitalize;
+cursor: pointer;
+  }
+  
+  /* The circle color is set dynamically based on the group's color property */
+  .app-sidebar-notes li .circle {
+    background-color: var(--group-color); /* Set the background color dynamically */
+  }
+  
+  /* Rest of your CSS styles... */
+  
