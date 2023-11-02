@@ -3,13 +3,13 @@ import "./Main.css";
 import lock from "../Main/lock.png";
 import back_ig from "../Main/back.png";
 import submit from "../Main/submit.png";
-const Main = ({ groupId, groups }) => {
+const Main = ({ groupId, groups ,setSelectedGroupId}) => {
   const [note, setNote] = useState("");
   const [notes, setNotes] = useState([]);
   const selectedGroup =groups.find((group)=>group.id===groupId)
   const [groupName, setGroupName] = useState(""); 
 // const group=groups.find((group)=> group.id===groupId)
-  const [showNotesSection, setShowNotesSection] = useState(false);
+  // const [showNotesSection, setShowNotesSection] = useState(false);
 
   const handleNoteChange = (event) => {
     setNote(event.target.value);
@@ -17,7 +17,7 @@ const Main = ({ groupId, groups }) => {
 
   const handleNoteSubmit = () => {
     if (note.trim() !== "") {
-      //  const groupName = groups.find((group) => group.id === groupId).name;
+        // const groupName = groups.find((group) => group.id === groupId).name;
       const newNote = {
         text: note,
         time: new Date().toLocaleTimeString([], {
@@ -26,7 +26,7 @@ const Main = ({ groupId, groups }) => {
         }),
         date: new Date().toLocaleDateString(),
          groupName: groupName,
-        // groupId:groupId
+         groupId:groupId
       };
       // const updatedNotes=[...group.notes,newNote];
       // const updatedGroups=groups.map((g)=>(g.id===groupId ?{...g,notes:updatedNotes}:g))
@@ -75,7 +75,7 @@ const Main = ({ groupId, groups }) => {
           </div>
         </div>
       ) : (
-        <div className="pre" onClick={() => setShowNotesSection(true)}>
+        <div className="pre" onClick={() => setSelectedGroupId(null)}>
           <img src={back_ig} className="main_bg" alt="" />
           <h1 className="heading">Pocket Notes</h1>
           <p>

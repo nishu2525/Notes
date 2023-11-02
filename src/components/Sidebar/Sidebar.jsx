@@ -1,7 +1,9 @@
 import React from "react";
 import "./Sidebar.css";
 
-const Sidebar = ({ groups, openPopup, openNoteEditor }) => {
+const Sidebar = ({ groups, openPopup,selectedGroupId,handleGroupClick }) => {
+
+
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
@@ -13,7 +15,7 @@ const Sidebar = ({ groups, openPopup, openNoteEditor }) => {
       <div className="app-sidebar-notes">
         <ul>
           {groups.map((group, index) => (
-            <li key={index} onClick={() => openNoteEditor(group.id)}>
+            <li key={index} onClick={() => handleGroupClick(group.id)} className={selectedGroupId===group.id ? "active": ""}>
               <div className="circle" style={{ backgroundColor: group.color }}>
                 {" "}
                 {group.name.slice(0, 2)}{" "}
