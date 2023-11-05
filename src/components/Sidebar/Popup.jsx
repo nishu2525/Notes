@@ -11,19 +11,18 @@ const Popup = ({ onClose, onGroupCreate }) => {
   const handleColorSelection = (color) => {
     setSelectedColor(color);
   };
-
-  const handleGroupCreation = () => {
+  const handleGroupCreation = async () => {
     if (groupName && selectedColor) {
-      onGroupCreate({ name: groupName, color: selectedColor });
-      onClose(); 
+      await onGroupCreate({ name: groupName, color: selectedColor });
+      onClose();
     }
+    console.log("group created" ,groupName)
   };
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       const popup = document.getElementById('popup');
       if (popup && !popup.contains(event.target)) {
-        onClose(); // Close the popup when clicking outside
+        onClose(); 
       }
     };
 
@@ -52,7 +51,7 @@ const Popup = ({ onClose, onGroupCreate }) => {
             />
           ))}
         </div>
-        <button onClick={handleGroupCreation}>Create </button>
+        <button className='create_button' onClick={handleGroupCreation}>Create </button>
       </div>
     </div>,
     document.body
