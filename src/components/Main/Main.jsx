@@ -27,7 +27,31 @@ const Main = ({ groupId, groups, setSelectedGroupId }) => {
       setNote("");
     }
   };
-
+  // const handleNoteSubmit = () => {
+  //   if (note.trim() !== "") {
+  //     const newNote = {
+  //       text: note,
+  //       time: new Date().toLocaleTimeString([], {
+  //         hour: "2-digit",
+  //         minute: "2-digit",
+  //       }),
+  //       date: new Date().toLocaleDateString(),
+  //       groupName: selectedGroup.name,
+  //       groupId: groupId,
+  //     };
+  
+  //     // Find the group in the state and update its notes
+  //     const updatedGroups = groups.map((group) => {
+  //       if (group.id === groupId) {
+  //         return { ...group, notes: [...group.notes, newNote] };
+  //       }
+  //       return group;
+  //     });
+  
+  //     setGroups(updatedGroups);
+  //     setNote("");
+  //   }
+  // };
   return (
     <div className="main">
       {selectedGroup ? (
